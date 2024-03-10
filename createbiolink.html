@@ -103,25 +103,41 @@
 								<h2 class="section__heading">Create Bio Link</h2>
 								<p class="section__description">
 								<h1>Leave blank if you don't want some of these</h1>
-                						<h1>Name: </h1>
-                						<input type="text" id="name" name="name">
-								<h1>Description: </h1>
-                						<input type="text" id="desc" name="desc">
-								<h1>Discord server: </h1>
-                						<input type="text" id="dcserver" name="dcserver">
-								<h1>Discord account: </h1>
-                						<input type="text" id="dcacc" name="dcacc">
-								<h1>Website: </h1>
-                						<input type="text" id="website" name="website">
-								<h1>Donate: </h1>
-                						<input type="text" id="donate" name="donate">
-								<h1>Youtube: </h1>
-                						<input type="text" id="youtube" name="youtube">
-								<h1>Twitter: </h1>
-                						<input type="text" id="twitter" name="twitter">
-								<h1>Twitch: </h1>
-                						<input type="text" id="twitch" name="twitch">
-								<h1><a href="sumbit" class="button button--primary">Sumbit</a></h1>
+                						<form id="fileForm">
+        <label for="fileName">File Name:</label>
+        <input type="text" id="fileName" name="fileName" required>
+
+        <label for="fileDescription">File Description:</label>
+        <textarea id="fileDescription" name="fileDescription" rows="4" required></textarea>
+
+        <button type="button" onclick="createHTMLFile()">Create</button>
+    </form>
+
+    <script>
+        function createHTMLFile() {
+            const fileName = document.getElementById('fileName').value;
+            const fileDescription = document.getElementById('fileDescription').value;
+
+            // Send data to the server (replace 'http://localhost:3000' with your server address)
+            fetch('http://localhost:3000/create-html', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    fileName,
+                    fileDescription,
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
 								</p>
                 
 							</div>
