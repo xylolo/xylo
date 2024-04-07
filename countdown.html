@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta -->
+    <title>✨ xylo cloud ✨</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="assets" type="image/x-icon">
+    <meta name="description" content="Welcome to xylo cloud!">
+    <meta name="keywords" content="xylo, xylo cloud, xylocloud, python, xylo python">
+    <link rel="stylesheet" href="assets/animation.css">
+    <!-- OG -->
+    <meta property="og:title" content="Welcome to xylo cloud!">
+    <meta property="og:description" content="✨✨"/>
+    <meta property="og:url" content="https://xylocloud.xyz/"/>
+    <meta property="og:site_name" content="xylocloud.xyz">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+
+</head>
+
+<body class="relative font-inter antialiased">
+
+    <main class="relative min-h-screen flex flex-col justify-center bg-zinc-900 overflow-hidden">
+        <div class="w-full max-w-6xl mx-auto px-4 md:px-6 py-24">
+
+            <div class="text-center">
+
+                <!-- Illustration #1 -->
+                <div class="absolute top-10 left-0 rotate-180 -translate-x-3/4 -scale-x-100 blur-3xl opacity-70 pointer-events-none" aria-hidden="true">
+                    <img src="assets/glow.svg" class="max-w-none" width="852" height="582" alt="Illustration" />
+                </div>
+                
+                <!-- Illustration #2 -->
+                <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 blur-3xl opacity-70 pointer-events-none" aria-hidden="true">
+                    <img src="assets/glow.svg" class="max-w-none" width="852" height="582" alt="Illustration" />
+                </div>
+            
+                <div class="relative">
+
+                    <!-- Title -->
+                    <h1 class="inline-flex font-extrabold text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4"> xylo cloud</h1>
+                    
+                    <div class="max-w-3xl mx-auto mb-8">
+                        <p class="text-lg text-slate-400">Everything you need in 1 place.</p>
+                    </div>
+
+                    <div id="countdown"></div>
+
+  <script>
+    var countDownDate = new Date("April 8, 2024 19:30:00").getTime();
+
+    var x = setInterval(function() {
+
+      var now = new Date().getTime();
+
+      var distance = countDownDate - now;
+
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+    
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "Released!";
+      }
+    }, 1000);
+
+  </script>
+  
+
+                    <div class="inline-flex justify-center space-x-4">
+
+                      <!-- Buy now button -->
+                      <div>
+                        <a href="https://xylocloud.xyz/discord" class="mb-4 lg:flex  bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6  text-white inline-block">
+                          <span class="absolute inset-0 overflow-hidden rounded-full">
+                            <span class="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(76,29,149,0.6)_0%,rgba(76,29,149,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
+                          </span>
+                          <div class="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-900 py-1 px-6 md:px-12 ring-1 ring-white/10">
+                            <span>
+                              Discord
+                            </span>
+                            <svg fill="none" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M10.75 8.75L14.25 12L10.75 15.25" stroke="currentColor" strokelinecap="round" strokelinejoin="round" strokewidth="1.5"></path>
+                            </svg>
+                          </div>
+                          <span class="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-purple-400/0 via-purple-400/90 to-purple-400/0 transition-opacity duration-500 group-hover:opacity-40"></span>
+                        </a>
+                      </div>
+
+                     
+                </div>
+            </div>
+    
+        </div>
+
+        <!-- Particles Animation -->
+        <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <canvas data-particle-animation></canvas>
+        </div>
+
+    </main>
+
+
+  
+  
+  
+
+  <!-- Footer -->
+  <footer class="bg-zinc-900 text-center pb-1 pt-1">
+    <p class="text-sm text-slate-500 mb-5">
+      xylo cloud - 2024
+    </p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/particles.js"></script>
+  <script src="assets/spotlight.js"></script>
+  <script src="assets/reveal.js"></script>
+
+</body>
+
+</html>
